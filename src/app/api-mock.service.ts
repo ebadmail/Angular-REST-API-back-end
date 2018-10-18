@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Todo } from './todo';
-import { Observable } from 'rxjs';
-import { of } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
 @Injectable()
