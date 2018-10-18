@@ -17,11 +17,12 @@ install:
 
 script:
   - yarn lint
-  - yarn build --base-href https://[ your github username ].github.io/my-awesome-project/
+  - yarn build --base-href https://ebadmail.github.io/Angular-REST-API-back-end/
+  
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/my-awesome-project
+  local_dir: dist/Angular-REST-API-back-end
   on:
     branch: master
