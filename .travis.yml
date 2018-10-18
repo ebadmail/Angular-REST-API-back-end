@@ -13,7 +13,6 @@ cache:
     - node_modules
 
 install:
-  - npm install
   - npm install -g codelyzer
   - npm install -g @angular/cli
   - npm link @angular/cli
