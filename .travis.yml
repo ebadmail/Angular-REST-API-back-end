@@ -1,18 +1,27 @@
-sudo: required
-addons:
-  chrome: stable
-
 language: node_js
 node_js:
-  - "8"
+  - "9"
+dist: trusty
+sudo: false
 
 branches:
   only:
-    - master
+  - master
 
-before_script:
-  - npm install -g @angular/cli
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install -g yarn
 
 script:
-  - ng build --prod --aot
-- ng test
+  - yarn lint
+  - yarn build --base-href https://[ your github username ].github.io/my-awesome-project/
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/my-awesome-project
+  on:
+    branch: master
