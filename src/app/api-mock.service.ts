@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Todo } from './todo';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
+import { of } from 'rxjs/observable/of';
+import 'rxjs/add/operator/delay';
 
 @Injectable()
 export class ApiMockService {
